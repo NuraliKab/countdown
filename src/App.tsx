@@ -23,8 +23,9 @@ function getTimeRemaining(targetDate: Date) {
 
 // Background options the user can choose from. You can add more later.
 const BACKGROUNDS = [
-	{ id: 'city-night', label: 'Twice', url: 'https://lv2-cdn.azureedge.net/twice/862494b8a03e4b38a214c6b80247cace-11-%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8E%E1%85%A6_%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%89%E1%85%A6%E1%86%B83_%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A9%E1%86%AB-2.jpg' },
-
+	{ id: 'twice1', label: 'Twice', url: 'https://image-0.uhdpaper.com/wallpaper/twice-all-members-kpop-4k-wallpaper-uhdpaper.com-120@0@i.jpg?dl' },
+	{ id: 'twice2', label: 'Twice2', url: 'https://image-0.uhdpaper.com/wallpaper/twice-all-members-kpop-4k-wallpaper-uhdpaper.com-120@0@i.jpg?dl' },
+	{ id: 'twice3', label: 'Twice3', url: 'https://wallpapercat.com/w/full/f/d/4/1006482-3840x2160-desktop-4k-twice-k-pop-wallpaper.jpg' },
 ];
 
 // LocalStorage key to remember the user's chosen background across visits.
@@ -82,8 +83,7 @@ export default function App() {
 			<div className="scrim" />
 
 			<div className="card">
-				<h1 className="title">Concert Countdown</h1>
-				<p className="subtitle">Counting down to May 30, {targetYear}</p>
+				<h1 className="title">Twice This is For</h1>
 
 				{/* Countdown display: days, hours, minutes, seconds */}
 				<div className="countdown" aria-live="polite">
