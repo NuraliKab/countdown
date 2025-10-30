@@ -41,7 +41,7 @@ export default function App() {
 	const concertDate = new Date(targetYear, 4, 30, 0, 0, 0);
 
 	// 2) Live countdown state. We tick every second.
-	const [nowTick, setNowTick] = React.useState<number>(() => Date.now());
+	const [, setNowTick] = React.useState<number>(() => Date.now());
 	const time = getTimeRemaining(concertDate);
 
 	// Update the tick every 1000ms to re-render the countdown.
