@@ -32,13 +32,9 @@ const BACKGROUNDS = [
 const BG_STORAGE_KEY = 'countdown:bg';
 
 export default function App() {
-	// 1) Target date: your concert on May 30.
-	//    We set the year dynamically: if May 30 this year is already past, use next year.
-	const today = new Date();
-	const currentYear = today.getFullYear();
-	const targetThisYear = new Date(currentYear, 4 /* May is 4 (0-indexed) */, 30, 0, 0, 0);
-	const targetYear = targetThisYear.getTime() >= today.getTime() ? currentYear : currentYear + 1;
-	const concertDate = new Date(targetYear, 4, 30, 0, 0, 0);
+	// 1) Target date: your concert on May 30, 2026 at 20:00 Amsterdam Time.
+	//    We use a fixed ISO string with offset +02:00 (CEST) to ensure it's always treated as Amsterdam time.
+	const concertDate = new Date('2026-05-30T20:00:00+02:00');
 
 	// 2) Live countdown state. We tick every second.
 	const [, setNowTick] = React.useState<number>(() => Date.now());
